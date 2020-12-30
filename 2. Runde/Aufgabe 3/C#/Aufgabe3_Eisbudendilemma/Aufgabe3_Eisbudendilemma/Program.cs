@@ -35,7 +35,7 @@ namespace Aufgabe3_Eisbudendilemma
             }
 
             //DistanceSub();
-            Console.WriteLine(Methods.Check_NearestDistanceFront(Entered_Addresses, 0, 0, 0, 20));
+            Console.WriteLine(Methods.Check_NearestDistanceFront(Entered_Addresses, 0, 20));
 
             // Methods.Kombinations(20);
             //Houses();
