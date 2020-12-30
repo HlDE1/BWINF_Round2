@@ -12,3 +12,10 @@ C:\Users\natix\OneDrive\Desktop\Coding Projects\repos\BWINF\2. Runde\Aufgabe 3\C
 C:\Users\natix\OneDrive\Desktop\Coding Projects\repos\BWINF\2. Runde\Aufgabe 3\C#\Aufgabe3_Eisbudendilemma\Aufgabe3_Eisbudendilemma\obj\Debug\Aufgabe3_Eisbudendilemma.csproj.CoreCompileInputs.cache
 C:\Users\natix\OneDrive\Desktop\Coding Projects\repos\BWINF\2. Runde\Aufgabe 3\C#\Aufgabe3_Eisbudendilemma\Aufgabe3_Eisbudendilemma\obj\Debug\Aufgabe3_Eisbudendilemma.exe
 C:\Users\natix\OneDrive\Desktop\Coding Projects\repos\BWINF\2. Runde\Aufgabe 3\C#\Aufgabe3_Eisbudendilemma\Aufgabe3_Eisbudendilemma\obj\Debug\Aufgabe3_Eisbudendilemma.pdb
+C:\Users\HlDE1\source\repos\BWINF_Round2\2. Runde\Aufgabe 3\C#\Aufgabe3_Eisbudendilemma\Aufgabe3_Eisbudendilemma\bin\Debug\Aufgabe3_Eisbudendilemma.exe.config
+C:\Users\HlDE1\source\repos\BWINF_Round2\2. Runde\Aufgabe 3\C#\Aufgabe3_Eisbudendilemma\Aufgabe3_Eisbudendilemma\bin\Debug\Aufgabe3_Eisbudendilemma.exe
+C:\Users\HlDE1\source\repos\BWINF_Round2\2. Runde\Aufgabe 3\C#\Aufgabe3_Eisbudendilemma\Aufgabe3_Eisbudendilemma\bin\Debug\Aufgabe3_Eisbudendilemma.pdb
+C:\Users\HlDE1\source\repos\BWINF_Round2\2. Runde\Aufgabe 3\C#\Aufgabe3_Eisbudendilemma\Aufgabe3_Eisbudendilemma\obj\Debug\Aufgabe3_Eisbudendilemma.csprojAssemblyReference.cache
+C:\Users\HlDE1\source\repos\BWINF_Round2\2. Runde\Aufgabe 3\C#\Aufgabe3_Eisbudendilemma\Aufgabe3_Eisbudendilemma\obj\Debug\Aufgabe3_Eisbudendilemma.csproj.CoreCompileInputs.cache
+C:\Users\HlDE1\source\repos\BWINF_Round2\2. Runde\Aufgabe 3\C#\Aufgabe3_Eisbudendilemma\Aufgabe3_Eisbudendilemma\obj\Debug\Aufgabe3_Eisbudendilemma.exe
+C:\Users\HlDE1\source\repos\BWINF_Round2\2. Runde\Aufgabe 3\C#\Aufgabe3_Eisbudendilemma\Aufgabe3_Eisbudendilemma\obj\Debug\Aufgabe3_Eisbudendilemma.pdb

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Diagnostics;
 
 namespace Aufgabe3_Eisbudendilemma
 {
@@ -15,16 +16,16 @@ namespace Aufgabe3_Eisbudendilemma
         */
 
 
-        static List<string> input_txt = File.ReadAllLines(@"C:\Users\natix\OneDrive\Desktop\Coding Projects\repos\BWINF\2. Runde\Aufgabe 3\eisbuden1.txt").ToList();
-        static string Umpfang = input_txt[0].Split(' ')[0].ToString();
+        static List<string> input_txt = File.ReadAllLines(@"C:\Users\HlDE1\source\repos\BWINF_Round2\2. Runde\Aufgabe 3\eisbuden1.txt").ToList();
+        static string Umfang = input_txt[0].Split(' ')[0].ToString();
         static string Amount_Haus = input_txt[0].Split(' ')[1].ToString();
         static List<int> Entered_Addresses = new List<int>();
 
-        static int[] Place_Check = new int[Convert.ToInt32(Umpfang) + 1]; // [0= not a house| 1=house]
+        static int[] Place_Check = new int[Convert.ToInt32(Umfang) + 1]; // [0= not a house| 1=house]
 
-        static int firstBude = Convert.ToInt32(Convert.ToInt32(Umpfang) / 2);
+        static int firstBude = Convert.ToInt32(Convert.ToInt32(Umfang) / 2);
         static int SecondBude = Convert.ToInt32(firstBude / 2);
-        static int thirdBude = (Convert.ToInt32(Umpfang) / 2) + SecondBude;
+        static int thirdBude = (Convert.ToInt32(Umfang) / 2) + SecondBude;
 
         static void Main(string[] args)
         {
@@ -33,12 +34,11 @@ namespace Aufgabe3_Eisbudendilemma
                 Entered_Addresses.Add(Convert.ToInt32(Address));
             }
 
-            //Console.WriteLine(Umpfang);
-            //Console.WriteLine(Amount_Haus);
-            Houses();
-            GetBiggestDistance();
-            GetAllDistances();
-            //Check();
+            DistanceSub();
+            //Methods.Kombinations(20);
+            //Houses();
+            //GetBiggestDistance();
+            // GetAllDistances();
             Console.ReadKey();
         }
 
@@ -77,7 +77,7 @@ namespace Aufgabe3_Eisbudendilemma
         {
             int j = 0;
 
-            for (int i = 0; i <= Convert.ToInt32(Umpfang); i++)
+            for (int i = 0; i <= Convert.ToInt32(Umfang); i++)
             {
                 if (j < Entered_Addresses.Count)
                 {
@@ -101,7 +101,6 @@ namespace Aufgabe3_Eisbudendilemma
                 }
             }
         }
-
 
         public static int GetBiggestDistance()
         {
@@ -133,8 +132,6 @@ namespace Aufgabe3_Eisbudendilemma
                 Console.WriteLine("House Pos= " + Bude_Pos[1, Methods.GetMaxNum_index(Bude_Pos, 0)]);
                 Bude_Pos[0, Methods.GetMaxNum_index(Bude_Pos, 0)] = 0;
             }
-
-
             //Console.WriteLine(max_nums[0]);
             //Console.WriteLine(max_nums[1]);
             //Console.WriteLine(max_nums[2]);
@@ -155,10 +152,55 @@ namespace Aufgabe3_Eisbudendilemma
                 {
                     Console.WriteLine(Entered_Addresses[i] - Entered_Addresses[i - 1]);
                     //return Entered_Addresses[i] - Entered_Addresses[i - 1];
-
                 }
             }
             return 0;
+        }
+
+
+        public static void DistanceSub()
+        {
+            int i = 0;
+            int start = i;
+            int sum = 0;
+            //TODO: Rückwärts suchen | Eisbude posi zur nächstgelegenden zusammen rechnen 
+
+            for (i = i; i < Entered_Addresses.Count; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    if (Entered_Addresses[i] >= j)
+                    {
+                        if (i != Entered_Addresses.Count - 1)
+                        {
+                            sum = Entered_Addresses[i] - j;
+                            Console.WriteLine($"{Entered_Addresses[i]} - {j}= {Entered_Addresses[i] - j} ");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"{Entered_Addresses[i]} = {start}");
+                        }
+                    }
+                }
+            }
+        }
+
+
+        public static void CheckAllKombinations() // Kombination von den Häuser und den Buden 
+        {
+            for (int i = 0; i < Convert.ToInt32(Umfang); i++)
+            {
+                for (int j = i; j < Convert.ToInt32(Umfang); j++)
+                {
+                    for (int k = j; k < Convert.ToInt32(Umfang); k++)
+                    {
+                        if (i != k && i != j && k != j)
+                        {
+
+                        }
+                    }
+                }
+            }
         }
     }
 }
