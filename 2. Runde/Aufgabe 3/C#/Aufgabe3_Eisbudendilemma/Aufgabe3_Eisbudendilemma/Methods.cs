@@ -9,7 +9,7 @@ namespace Aufgabe3_Eisbudendilemma
 {
     class Methods
     {
-        public static int GetMaxNum(int[,] arr, int col)
+        public static int Array2D_GetMaxNum(int[,] arr, int col)
         {
             int max = arr[col, 0];
             for (int i = 0; i < arr.GetLength(col); i++)
@@ -21,7 +21,7 @@ namespace Aufgabe3_Eisbudendilemma
             }
             return max;
         }
-        public static int GetMaxNum_index(int[,] arr, int col)
+        public static int Array2D_GetMaxNum_index(int[,] arr, int col)
         {
             int max = arr[col, 0];
             int index = 0;
@@ -34,6 +34,19 @@ namespace Aufgabe3_Eisbudendilemma
                 }
             }
             return index;
+        }
+
+        public static int Array1D_GetMinNum(int[] arr)
+        {
+            int Min = arr[0];
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] < Min)
+                {
+                    Min = arr[i];
+                }
+            }
+            return Min;
         }
 
         public static int GetClosestNumber(List<int> List, int number)
@@ -63,6 +76,46 @@ namespace Aufgabe3_Eisbudendilemma
             Console.WriteLine($"{num}");
             string End = string.Format("{0:HH:mm:ss tt}", DateTime.Now);
             Console.WriteLine($"{Begin} - {End}");
+        }
+
+        public static int Check_NearestDistanceFront(List<int> Entered_Addresses, int i, int j) // Soll abchecken ob die näheste Bude, der erste Wert ist
+        {
+            int val_j = j;
+            int j_endloop = val_j + 3;
+
+            int start = i;
+            int sum = 0;
+            int[] min_tmp = new int[3];
+            int sum_LastNum = 0;
+            //List<int> min_tmp = new List<int>();
+            //TODO: Rückwärts suchen | Eisbude posi zur nächstgelegenden zusammen rechnen 
+
+            for (i = 0; i < Entered_Addresses.Count; i++)
+            {
+                for (j = val_j; j < j_endloop; j++)
+                {
+                    for (int k = 0; k < 3; k++)
+                    {
+                        if (Entered_Addresses[i] >= j)
+                        {
+
+                            sum = Entered_Addresses[i] - j;
+                            min_tmp[k] = sum;
+                            Console.WriteLine($"{Entered_Addresses[i]} + {j}= {Entered_Addresses[i] - j} ");
+
+
+                            //Console.WriteLine($"{Entered_Addresses[i]} = {start}");
+                            sum_LastNum = Entered_Addresses[i] - Entered_Addresses[i - 1];
+                            min_tmp[k] = Entered_Addresses[i] - (Entered_Addresses[i] - j);
+                            if (sum_LastNum < Methods.Array1D_GetMinNum(min_tmp))
+                                Console.WriteLine($"{Entered_Addresses[i]}. {Entered_Addresses[i - 1]}");
+                            else
+                                Console.WriteLine($"{Entered_Addresses[i]}. {start}");
+                        }
+                    }
+                }
+            }
+            return 0;
         }
     }
 }
