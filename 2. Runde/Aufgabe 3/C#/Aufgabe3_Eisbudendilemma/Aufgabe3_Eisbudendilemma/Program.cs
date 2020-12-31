@@ -16,7 +16,8 @@ namespace Aufgabe3_Eisbudendilemma
         */
 
 
-        static List<string> input_txt = File.ReadAllLines(@"C:\Users\natix\source\repos\BWINF_Round2\2. Runde\Aufgabe 3\eisbuden1.txt").ToList();
+        // static List<string> input_txt = File.ReadAllLines(@"C:\Users\natix\source\repos\BWINF_Round2\2. Runde\Aufgabe 3\eisbuden1.txt").ToList();
+        static List<string> input_txt = File.ReadAllLines(@"C:\Users\HlDE1\Source\Repos\HlDE1\BWINF_Round2\2. Runde\Aufgabe 3\eisbuden2.txt").ToList();
         static string Umfang = input_txt[0].Split(' ')[0].ToString();
         static string Amount_Haus = input_txt[0].Split(' ')[1].ToString();
         static List<int> Entered_Addresses = new List<int>();
@@ -35,12 +36,10 @@ namespace Aufgabe3_Eisbudendilemma
             }
 
             //DistanceSub();
-            Console.WriteLine(Methods.Check_NearestDistanceFront(Entered_Addresses, 0, 20));
+            Methods.Check_NearestDistanceFront(Entered_Addresses, Convert.ToInt32(Umfang));
+            //Console.WriteLine(Methods.Check_NearestDistanceFront(Entered_Addresses, 0, 20));
 
             // Methods.Kombinations(20);
-            //Houses();
-            //GetBiggestDistance();
-            // GetAllDistances();
             Console.ReadKey();
         }
 
