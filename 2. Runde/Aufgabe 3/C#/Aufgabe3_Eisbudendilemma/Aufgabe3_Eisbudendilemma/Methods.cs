@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using System.IO;
 
 namespace Aufgabe3_Eisbudendilemma
 {
@@ -104,8 +105,8 @@ namespace Aufgabe3_Eisbudendilemma
                                 //Console.WriteLine($"{Entered_Addresses[a]} - {i}= {Math.Abs(Entered_Addresses[a] - i)}| {Entered_Addresses[a]} - {j}= {Math.Abs(Entered_Addresses[a] - j)}| {Entered_Addresses[a]} - {k}= {Math.Abs(Entered_Addresses[a] - k)} | {sum_LastNum} {Array1D_GetMinNum(min_tmp)}| {i} {j} {k}");
                                 sum += Array1D_GetMinNum(min_tmp);
                             }
-                           // Console.WriteLine("Sum:" + sum);
-                           // Console.WriteLine("------------------------------------------------------------- ");
+                            // Console.WriteLine("Sum:" + sum);
+                            // Console.WriteLine("------------------------------------------------------------- ");
                             sum_all.Add($"{sum}| {i} {j} {k}");
                             sum = 0;
                         }
@@ -114,10 +115,11 @@ namespace Aufgabe3_Eisbudendilemma
             }
             foreach (var items in sum_all)
             {
-                Console.WriteLine(items);
+                // Console.WriteLine(items);
+                File.AppendAllText(Directory.GetCurrentDirectory() + "/Text.txt", items+Environment.NewLine);
             }
 
-            //Console.WriteLine("Min: " + sum_all.Min());
+            Console.WriteLine("Min: " + sum_all.Min());
             string End = string.Format("{0:HH:mm:ss tt}", DateTime.Now);
             Console.WriteLine($"{Begin} - {End}");
         }
